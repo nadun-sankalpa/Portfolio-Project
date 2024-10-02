@@ -133,7 +133,7 @@ span{
 
 .social-media a:hover{
     background: var(--main-color);
-    color: var(--second-bg-color);
+    color: var(--text-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
 
@@ -191,42 +191,59 @@ span{
     margin-bottom: 5rem;
 }
 
-.services-container{
-    display: flex;
-    justify-content: center;
+.projects{
+    background: url('/Portfolio-Project/images/background.jpg')center no-repeat;
+    background-size: cover;
+}
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    margin: 5rem 0;
+    gap: 3rem;
+    row-gap: 5rem;
 }
 
-.services-container .services-box{
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+.project-card{
+    height: 600px;
+    max-width: 450px;
+    background-color: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    border: 2px solid var(--main-color);
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: 0.4s ease;
 }
 
-.services-container .services-box:hover{
-    border-color: var(--main-color);
+.project-card:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
     transform: scale(1.02);
 }
 
-.services-box i{
-    font-size: 7rem;
-    color: var(#ffe606);
+.project-card img{
+    max-width: 18vw;
+    object-fit: cover;
 }
 
-.services-box h3{
-    font-size: 2.6rem;
+.project-card h3{
+    font-size: 3rem;
 }
 
-.services-box p{
+.project-card p{
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+
 }
+
 
 .portfolio{
     background: var(--second-bg-color);
@@ -378,6 +395,7 @@ span{
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
+   
 }
 
 .timeline-content:hover{
@@ -411,6 +429,58 @@ span{
 ::-webkit-scrollbar-track{
     background: var(--bg-color);
     width: 50px;
+}
+
+.skills{
+    background: var(--bg-color);
+}
+.skills .container{
+    background: rgba(155, 18, 18, 0.24);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-top: 5%;
+}
+
+
+
+.skills .container .row{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.skills .container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px var(--main-color);
+    background: var(--bg-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+
+.skills .container .bar:hover{
+    box-shadow: 0 4px 20px var(--main-color);
+    transform: scale(1.03);
+}
+
+.skills .container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills .container .bar .info span{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
 }
 
 .cotact h2{
@@ -464,7 +534,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--main-color);
 }
 
 .footer-text p{
@@ -476,7 +546,7 @@ span{
     justify-content: center;
     align-items: center;
     padding: .8rem;
-    background: var(--main-color);
+    background: var(--text-color);
     border-radius: .8rem;
     transition: .5s ease;
 }
