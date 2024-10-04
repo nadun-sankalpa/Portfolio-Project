@@ -18,6 +18,15 @@
     --main-color: rgb(221, 8, 8);
 }
 
+.full-home{
+    background-image: url('/Portfolio-Project/images/background2.jpg'); ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff00;
+    width: 1920px;
+    height: 1080px;
+}
 html{
     font-size: 62.5%;
     overflow-x: hidden;
